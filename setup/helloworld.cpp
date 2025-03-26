@@ -1,18 +1,15 @@
 #include <iostream>
-#include <vector>
-#include <string>
-
 using namespace std;
 
-int main()
+double square(double x) {
+    return x*x;
+}
+
+void print_square(double x)
 {
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+    cout << "the square of " << x <<" is " << square(x) << "\n";
+}
 
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-    }
-    cout << endl;
-
-    return 0;
+int main(){
+    print_square(5);
 }
